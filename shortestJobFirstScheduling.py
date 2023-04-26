@@ -1,7 +1,7 @@
 n = 3
 # ----------Process related times--------------------------
 process=[i for i in range(n)]
-at =[1, 2, 0, 4, 3]
+at =[0, 0, 0, 0, 0]
 bt =[24, 2, 4, 1, 3]
 # at = [0, 0, 0]
 # bt = [10, 5, 8]
@@ -11,9 +11,9 @@ wt = [0 for i in range(n)]
 
 #---------------Building table starts here-------------------------
 table = [[process[i], at[i], bt[i], tat[i], wt[i]] for i in range(n)]
-table.sort(key= lambda x:x[1]) #Sorting in order of arrival time.
+table.sort(key= lambda x:x[2]) #Sorting in order of arrival time.
 
-ganttChart = [table[i][0] for i in range(n)]
+# ganttChart = [table[i][0] for i in range(n)]
 
 
 #--------------Will Calculate TAT and WT-------------------------------
@@ -31,7 +31,7 @@ for i in range(n):
 table.sort(key=lambda x:x[0]) #Sorting in order of PID
 
 #--------------printing part------------------------------------
-print(ganttChart)
+# print(ganttChart)
 print("Process" +" at\t" +" bt\t" +"tat\t" +"wt")
 for i in range(n):
     for j in range(5):
