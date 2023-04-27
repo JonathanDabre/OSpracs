@@ -7,7 +7,7 @@ m = 4
 
 processes=[i for i in range(n)]
 allocated = [[0, 0, 1, 2], [1, 0, 0, 0], [1, 3, 5, 4], [0, 6, 3, 2], [0, 0, 1, 4]]
-maxreq = [[0, 0, 1, 2], [1, 7, 5, 0], [2, 3, 5, 6], [0, 6, 5, 2], [0, 6, 5, 6]]
+maxreq = [[0, 0, 1, 2], [1, 7, 5, 0], [4, 3, 5, 6], [0, 6, 5, 2], [0, 6, 5, 6]]
 available = [[1, 5, 2, 0]]
 safeSeq = []
 
@@ -61,3 +61,4 @@ while True:
     safeSeq.append(ind)
     available = [[available[0][j]+allocated[ind][j] for j in range(m)]]        
     
+print(totalResources)

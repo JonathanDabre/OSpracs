@@ -22,12 +22,13 @@ totalTAT = 0
 totalWT = 0
 
 for i in range(n):
-    current = current + table[i][2]
-    table[i][3] = current - table[i][1]
-    table[i][4] = table[i][3] - table[i][2]
+    current = current + table[i][2] #ct= current + bt 
+    table[i][3] = current - table[i][1] #tat = ct -at
+    table[i][4] = table[i][3] - table[i][2] #wt = tat -bt
+    
     totalTAT = totalTAT + table[i][3]
     totalWT = totalWT + table[i][4]
-    
+
 table.sort(key=lambda x:x[0]) #Sorting in order of PID
 
 #--------------printing part------------------------------------
