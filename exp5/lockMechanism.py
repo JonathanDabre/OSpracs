@@ -1,5 +1,7 @@
 import time
 from multiprocessing import Process, Lock, Value
+#when we use above statement "from ....", we can use function without their module name
+# where in first line we are importing using "import ...", here we have to use module.function()
 
 def add_five(total, lock):
     for i in range(100):
